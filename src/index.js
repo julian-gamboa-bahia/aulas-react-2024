@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
+import Frontend from './Componentes/Frontend';
+
+import MyComponent from './Servicos/MyComponent';
+
+import KeyEventsExample from './Servicos/KeyEventsExample'; 
+
 import reportWebVitals from './reportWebVitals';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/js/bootstrap.min';
+import 'bootstrap/dist/js/bootstrap.esm.min';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MyComponent />
   </React.StrictMode>
 );
 
