@@ -1,5 +1,6 @@
 /node-fev-2024/backend-metodo-tdd/node_modules
-/node-fev-2024/backend-metodo-tdd/front-end
+/node-fev-2024/backend-metodo-tdd/front-end/
+
 
 *.png
 *.jpg
