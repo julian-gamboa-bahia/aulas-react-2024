@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-import ListaPastas from './ListaPastas';
+function Etiquetas(props) {
 
 
-function Novo() {
+    const { etiqueta } = useParams();
+
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -37,8 +39,7 @@ function Novo() {
         const fetchData = async () => {
             try {
                 // Faz a requisição para a API
-                const response = await fetch('http://localhost:3001/novas');
-                //const response = await fetch('http://localhost:3001/lista_pastas');
+                const response = await fetch(`http://localhost:3001/${etiqueta}`);                
 
                 // Verifica se a resposta foi bem-sucedida (status code 200-299)
                 if (!response.ok) {
@@ -97,7 +98,6 @@ function Novo() {
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row">
-                        <ListaPastas />
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
                                 <img class="card-img-top" src={data[contador]} alt="Card image cap"
@@ -161,4 +161,7 @@ function Novo() {
     );
 }
 
-export default Novo;
+
+
+
+export default Etiquetas;
